@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Hello Timeout</title>
+  </head>
+  <body>
+    <h1>Expect to see an alert 3 seconds after page loads!</h1>
+    <br>
+    <h1>What time is it??</h1>
+    <p id="time"></p>
+
+    <script type="text/javascript">
+      setTimeout(function() {
+        alert("Hello! This happened 3 seconds after the page loaded.")
+      }, 3000)
+
+      let timeElement = document.querySelector('#time')
+
+      setInterval(function() {
+        let date = Date();
+        timeElement.innerHTML = date;
+      }, 2000)
+    </script>
+  </body>
+</html>
